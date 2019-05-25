@@ -47,7 +47,7 @@ public class DependencyCheck {
                                }
                            }
                        }
-                       Thread.sleep(10000);
+                       Thread.sleep(30000);
                    } catch(InterruptedException ie) {
                        System.out.println("interrupted exception");
                    }
