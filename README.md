@@ -17,3 +17,17 @@ To add any new Dependency follow these steps:
 2. Class should also implement DependencyInterface
 3. DependencyCheck collects all beans annotated with @Dependency and monitors them
 
+
+
+APIs
+
+1. POST http://<ip>:8080/signup is the api to be used by users to register themselves as subscribers to email alerts. Here "ip" is the ip of machine on which this application is running. "localhost" can be used if the application is running on the same machine.
+    
+     Request Body to be used:
+  
+      {
+	      "name":"xxxx",
+	      "emailId":"xxxx@gmail.com"
+      }
+      
+ 2. GET http://<ip>:8080/health - can be used to check connectivity to the SpringDependencyAlert application
