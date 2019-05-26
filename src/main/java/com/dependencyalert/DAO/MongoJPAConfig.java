@@ -1,4 +1,4 @@
-package com.gta.DAO;
+package com.dependencyalert.DAO;
 
 import com.mongodb.ServerAddress;
 import com.mongodb.WriteConcern;
@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = { "com.gta.DAO" })
+@EnableMongoRepositories(basePackages = {"com.dependencyalert.DAO"})
 @PropertySource("classpath:mongo.properties")
 public class MongoJPAConfig extends AbstractMongoConfiguration {
 
@@ -31,7 +31,7 @@ public class MongoJPAConfig extends AbstractMongoConfiguration {
 
     @Override
     protected String getMappingBasePackage() {
-        return "com.gta.DAO";
+        return "com.dependencyalert.DAO";
     }
 
     @Bean

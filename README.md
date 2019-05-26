@@ -10,12 +10,14 @@ PRE- REQUISITES and HOWTO
 5. cd SpringDependencyAlert
 6. Run 'mvn clean install'
 7. java -jar target/Spring-Dependency-Alert-1.0-SNAPSHOT.jar
+8. Modify dependencyalert.alertFrequency in application.properties to change the frequency of dependency check. Default is 2 minutes
 
 
 To add any new Dependency follow these steps:
-1. Annotate class with 'Dependency'
-2. Class should also implement DependencyInterface
-3. DependencyCheck collects all beans annotated with @Dependency and monitors them
+
+1. Create a class which implements "org.springframework.boot.actuate.health.HealthIndicator"
+2. Override the health method to provide details.
+3. All HealthIndicator components are fetched and read by healthendpoint to mark the status.
 
 
 

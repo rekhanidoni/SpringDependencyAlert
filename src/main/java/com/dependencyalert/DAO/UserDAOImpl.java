@@ -1,9 +1,8 @@
-package com.gta.DAO;
+package com.dependencyalert.DAO;
 
-import com.gta.service.Dependency;
-import com.gta.service.DependencyInterface;
+import com.dependencyalert.service.Dependency;
+import com.dependencyalert.service.DependencyInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.*;
 
 import javax.annotation.PostConstruct;

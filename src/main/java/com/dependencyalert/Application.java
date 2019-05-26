@@ -1,4 +1,4 @@
-package com.gta;
+package com.dependencyalert;
 
 
 import org.springframework.boot.SpringApplication;

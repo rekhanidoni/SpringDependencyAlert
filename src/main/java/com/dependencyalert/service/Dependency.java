@@ -1,4 +1,4 @@
-package com.gta.service;
+package com.dependencyalert.service;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 

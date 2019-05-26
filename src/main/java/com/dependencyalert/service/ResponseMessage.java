@@ -1,4 +1,4 @@
-package com.gta.service;
+package com.dependencyalert.service;
 
 public class ResponseMessage {
 

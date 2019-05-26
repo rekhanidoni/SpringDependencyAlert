@@ -1,20 +1,25 @@
-package com.gta.service;
+package com.dependencyalert.service;
 
-import com.gta.DAO.User;
-import com.gta.DAO.UserDAOImpl;
+import com.dependencyalert.DAO.User;
+import com.dependencyalert.DAO.UserDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.health.HealthEndpoint;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 @RestController
 public class Controller {
 
     @Autowired
     private UserDAOImpl userDAO;
+    @Autowired
+    HealthEndpoint healthpoint;
 
     @GetMapping(name = "/health")
-    public String healthCheck() {
-        return "OK";
+    public Map healthCheck() {
+        return healthpoint.health().getDetails();
     }
 
 

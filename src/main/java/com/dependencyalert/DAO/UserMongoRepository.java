@@ -1,4 +1,4 @@
-package com.gta.DAO;
+package com.dependencyalert.DAO;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
